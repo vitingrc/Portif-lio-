@@ -1,0 +1,205 @@
+/* ==========================================================
+   PONTO DE PARTIDA — AULA 4
+
+   Onde a aula 3 terminou, com o R1 de hoje já resolvido como
+   referência. Se você faltou, perdeu o arquivo ou não terminou
+   a aula anterior, comece daqui.
+
+   Os requisitos estão no Material_Aula04, cada um com o critério
+   de aceite. As dicas ficam no fim daquele documento — abra só
+   se travar.
+   ========================================================== */
+
+/* ----------------------------------------------------------
+   RESULTADO DA AULA 3 — cor, tipografia e box model.
+   Não é preciso mexer nesta parte hoje.
+   ---------------------------------------------------------- */
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1e2a26;
+  background-color: #f2f4f3;
+  margin: 0;
+  padding: 24px;
+}
+
+.topo {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 2px solid #0d5b52;
+  margin-bottom: 24px;
+}
+
+.foto {
+  border-radius: 50%;
+}
+
+#titulo-principal {
+  color: #0d5b52;
+  margin: 0;
+}
+
+.cargo {
+  margin: 4px 0 0 0;
+  color: #5f706a;
+}
+
+.menu {
+  background-color: #ffffff;
+  padding: 12px 20px;
+  border: 1px solid #c7d2cc;
+  margin-bottom: 24px;
+}
+
+.menu a {
+  color: #0d5b52;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+main {
+  background-color: #ffffff;
+  padding: 20px;
+  border: 1px solid #c7d2cc;
+  margin-bottom: 24px;
+}
+
+h2 {
+  color: #0d5b52;
+  border-bottom: 2px solid #c7d2cc;
+  padding-bottom: 6px;
+}
+
+.carrossel img {
+  width: 300px;
+  border: 1px solid #9fb3ab;
+}
+
+.card {
+  background-color: #e4ece9;
+  border: 1px solid #9fb3ab;
+  padding: 16px;
+}
+
+.card h3 {
+  margin: 0 0 8px 0;
+  color: #0d5b52;
+  font-size: 1.05rem;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.rodape {
+  background-color: #ffffff;
+  padding: 16px 20px;
+  border: 1px solid #c7d2cc;
+}
+
+.rodape a {
+  color: #0d5b52;
+  text-decoration: none;
+}
+
+
+/* ==========================================================
+   R1 — NAVEGAÇÃO HORIZONTAL   ·   já resolvido
+   Referência para os requisitos seguintes. O raciocínio está
+   explicado no Material_Aula04, seção 3.
+   ========================================================== */
+
+.menu ul {
+  display: flex;      /* declarado no <ul>, que é o pai dos <li> */
+  gap: 24px;
+  list-style: none;   /* remove os marcadores */
+  margin: 0;          /* <ul> tem margem por padrão do navegador */
+  padding: 0;         /* e recuo à esquerda por padrão */
+}
+
+
+/* ==========================================================
+   DAQUI PARA BAIXO É COM VOCÊ
+
+   R2 · cabeçalho com foto e nome alinhados
+   R3 · galeria que se reorganiza por largura
+   R4 · rodapé em linha
+   R5 · breakpoint em 600px
+   R6 · funcionar em 360px
+   R7 · segunda página e navegação
+   R8 · carrossel de destaques
+   ========================================================== */ 
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.topo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  padding: 0;
+}
+
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card {
+  flex: 1 1 280px;
+}
+
+.rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rodape .links {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .topo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rodape {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+}
